@@ -1,0 +1,39 @@
+<div class="summary-container">
+    <div class="row mb-3">
+        <div class="form-group col-12 col-md-4">
+            <label for="usernameSummary">Name</label>
+            <p id="usernameSummary">{{ userInfo.name }}</p>
+        </div>
+        <div class="form-group col-12 col-md-4">
+            <label for="emailSummary">Email</label>
+            <p id="emailSummary">{{ userInfo.email }}</p>
+        </div>
+        <div class="form-group col-12 col-md-4">
+            <label for="phoneNumberSummary">Phone Number</label>
+            <p id="phoneNumberSummary">{{ userInfo.phone }}</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row mb-3">
+        <div class="form-group col-12">
+            <label for="addressLineSummary">Address</label>
+            <p id="addressLineSummary">{{ userInfo.addressLine }}</p>
+        </div>
+        <div class="form-group col-12 col-md-4">
+            <label for="citySummary">City</label>
+            <p id="citySummary">{{ userInfo.city }}</p>
+        </div>
+        <div class="form-group col-12 col-md-4">
+            <label for="stateSummary">State</label>
+            <p id="stateSummary">{{ userInfo.state }}</p>
+        </div>
+        <div class="form-group col-12 col-md-4">
+            <label for="countrySummary">Country</label>
+            <p id="countrySummary">{{ userInfo.country }}</p>
+        </div>
+    </div>
+    <div class="row justify-content-between m-0">
+        <button class="col-2 btn btn-primary btn-sm" (click)="confirm('back')">Back</button>
+        <button class="col-2 btn btn-success btn-sm" (click)="confirm('confirm')">Confirm</button>
+    </div>
+</div>

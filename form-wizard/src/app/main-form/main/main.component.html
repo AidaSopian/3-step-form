@@ -1,0 +1,14 @@
+<div class="row justify-content-center m-5">
+    <div class="col-6">
+        <div class="card">
+            <div class="main-container">
+                <p *ngIf="currStep != 4">{{'Step ' + this.currStep + ' of 3'}}</p>
+                <app-step-1 *ngIf="currStep == 1" (goNext)="addStep($event)"></app-step-1>
+                <app-step-2 *ngIf="currStep == 2" (updateStep)="addStep($event)"></app-step-2>
+                <app-step-3 *ngIf="currStep == 3" (confirmSummary)="addStep($event)"></app-step-3>
+                <app-step-success *ngIf="currStep == 4" (resetForm)="resetStep($event)"></app-step-success>
+            </div>
+        </div>
+    </div>
+</div>
+

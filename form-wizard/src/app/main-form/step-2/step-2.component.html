@@ -1,0 +1,28 @@
+<form [formGroup]="secondForm">
+    <div class="row mb-3">
+        <div class="form-group col-12">
+            <label for="addressLine">Address</label>
+            <input class="form-control" id="addressLine" type="text" formControlName="addressLine" placeholder="Address">
+            <small class="text-danger" *ngIf="this.secondForm.get('addressLine')?.errors && submitted">This field is required</small>
+        </div>
+        <div class="form-group col-12 col-md-4">
+            <label for="city">City</label>
+            <input class="form-control" id="city" type="text" formControlName="city" placeholder="City">
+            <small class="text-danger" *ngIf="this.secondForm.get('city')?.errors && submitted">This field is required</small>
+        </div>
+        <div class="form-group col-12 col-md-4">
+            <label for="state">State</label>
+            <input class="form-control" id="state" type="text" formControlName="state" placeholder="State">
+            <small class="text-danger" *ngIf="this.secondForm.get('state')?.errors && submitted">This field is required</small>
+        </div>
+        <div class="form-group col-12 col-md-4">
+            <label for="country">Country</label>
+            <input class="form-control" id="country" type="text" formControlName="country" placeholder="Country">
+            <small class="text-danger" *ngIf="this.secondForm.get('country')?.errors && submitted">This field is required</small>
+        </div>
+    </div>
+    <div class="row justify-content-between m-0">
+        <button class="col-2 btn btn-primary btn-sm" (click)="checkForm('back')">Back</button>
+        <button class="col-2 btn btn-primary btn-sm" (click)="checkForm('next')">Next</button>
+    </div>
+</form>
